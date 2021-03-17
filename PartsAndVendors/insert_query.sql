@@ -1,0 +1,31 @@
+INSERT INTO part VALUES (101, 'Scale', 30);
+INSERT INTO part VALUES (104, 'Sketch', 10);
+INSERT INTO part VALUES (105, 'Tape', 15);
+INSERT INTO part VALUES (107, 'Pad', 160);
+INSERT INTO part VALUES (110, 'Ink', 25);
+INSERT INTO part VALUES (112, 'Pin', 5);
+INSERT INTO part VALUES (124, 'Chalk', 120);
+INSERT INTO part VALUES (135, 'Paper', 80);
+
+INSERT INTO vendor VALUES (3, 'Crown', 'Delhi');
+INSERT INTO vendor VALUES (5, 'Topper', 'Delhi');
+INSERT INTO vendor VALUES (7, 'Avon', 'Mumbai');
+INSERT INTO vendor VALUES (11, 'Swan', 'Hyderabad');
+INSERT INTO vendor VALUES (13, 'Rally', 'Chennai');
+INSERT INTO vendor VALUES (15, 'Buddy', 'Chennai');
+
+INSERT INTO supply VALUES (104, 5, 40);
+INSERT INTO supply VALUES (104, 7, 420);
+INSERT INTO supply VALUES (104, 13, 380);
+INSERT INTO supply VALUES (105, 13, 350);
+INSERT INTO supply VALUES (107, 5, 500);
+INSERT INTO supply VALUES (107, 11, 200);
+INSERT INTO supply VALUES (107, 7, 10);
+INSERT INTO supply VALUES (110, 3, 22);
+INSERT INTO supply VALUES (110, 5, 35);
+INSERT INTO supply VALUES (110, 13, 150);
+INSERT INTO supply VALUES (110, 15, 20);
+INSERT INTO supply VALUES (124, 7, 300);
+INSERT INTO supply VALUES (124, 11, 34);
+INSERT INTO supply VALUES (124, 13, 12);
+
