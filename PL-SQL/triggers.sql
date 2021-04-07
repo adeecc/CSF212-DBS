@@ -56,3 +56,19 @@ BEGIN
     dbms_output.put_line('Triggd: From: ' || :old.price || ' -> ' || :new.price );
 END;
 /
+
+-- Insert into supply table and print sum of qty after insertion of the part that was inserted
+CREATE OR REPLACE TRIGGER qty_after_insert AFTER INSERT 
+ON supply
+FOR EACH ROW
+DECLARE
+    n number;
+    pragma autonomous_transaction; -- If this isn't there ORA 04091 
+     -- https://docs.oracle.com/cd/B10501_01/server.920/a96525/e2100.htm#1002387
+     -- https://docs.oracle.com/cd/E11882_01/appdev.112/e25519/triggers.htm#LNPLS2005
+BEGIN
+    SELECT SUM(qty) INTO n FROM supply where pid = :new.pid GROUP BY pid;
+    dbms_output.put_line('[' || :new.pid || '] Qty: ' || n);
+END;
+/
+

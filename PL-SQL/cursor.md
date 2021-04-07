@@ -4,8 +4,11 @@ Special Construct in PL/SQL to hold data rows returned by SQL Query
 
 - Reserved Area of memory in which outut of a query can be stored
 - Cursor Commands: `OPEN`, `FETCH`, 'CLOSE`
-- Attributed: 
-  - `%notfound`: 
+- Attributes: 
+  - `%rowcount`: Return number of rows fetched so far
+  - `%found`: returns true if last fetch returned a row otherwise false
+  - `%notfound`: returns true if last fetch did not return a row
+  - `%isopen`: returns true if cursor is open
 
 
 

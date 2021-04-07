@@ -1,8 +1,8 @@
 CREATE OR REPLACE PROCEDURE cursor1 AS
     id NUMBER;
     pr NUMBER;
-    cursor book_cursor IS 
-        SELECT bid, price FROM book;
+    cursor book_cursor 
+        IS SELECT bid, price FROM book;
     
 BEGIN
     OPEN book_cursor;
